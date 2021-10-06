@@ -10,8 +10,32 @@ namespace laba5
     {
         static void Main(string[] args)
         {
-            Cheque cheque = new Cheque(29092021);
-            cheque.ShowInfo();
+            Document docCheque = new Cheque(12122021, 10, 600);
+            Cheque cheque = docCheque as Cheque;
+            if (cheque != null)
+            {
+                cheque.ShowInfo();
+            }
+            IOrganization orgWaybill = new Waybill(06102021, 400, 0.2);
+            if (orgWaybill is Waybill)
+            {
+                Waybill waybill1 = (Waybill)orgWaybill;
+                waybill1.ShowInfo();
+            }
+            Document docReceipt = new Receipt(07102021, 500, "organiz");
+            if (docReceipt is Receipt receipt)
+            {
+                receipt.ShowInfo();
+            }
+            Console.WriteLine("------------------------------------");
+            Waybill waybill = orgWaybill as Waybill;
+            receipt = docReceipt as Receipt;
+            Document[] docs = { cheque, waybill, receipt};
+            Printer printer = new Printer();
+            foreach (var item in docs)
+            {
+                printer.IAmPrinting(item);
+            }
         }
     }
 }

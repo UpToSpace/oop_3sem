@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace laba5
 {
-    interface IDocument
+    interface IOrganization
     {
+        bool SignADoc();
         void ShowInfo();
     }
 }

@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace laba5
 {
-    public class Dates
+    class Printer
     {
-        public int Date
+        public virtual void IAmPrinting(Document doc)
         {
-            get;
-            set;
-        }
-        public Dates(int date)
-        {
-            Date = date;
+            Console.WriteLine(doc.GetType().Name);
+            doc.ToString();
         }
     }
 }

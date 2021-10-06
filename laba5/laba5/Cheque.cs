@@ -6,15 +6,30 @@ using System.Threading.Tasks;
 
 namespace laba5
 {
-    class Cheque : Date, IDocument
+    class Cheque : Document, IOrganization
     {
-        public Cheque(int date)
+        public int Sum
         {
-            SetDate(date);
+            get;
+            set;
         }
-        public void ShowInfo()
+        public Cheque(int date, int numberOfGoods, int sum) : base(date, numberOfGoods)
         {
-            Console.WriteLine("hello im " + GetType());
+            Sum = sum;
+        }
+        public bool SignADoc()
+        {
+            Console.WriteLine("Подписан чек");
+            return !Signed;
+        }
+        public override void ShowInfo()
+        {
+            base.ShowInfo();
+            Console.WriteLine($"Переопределенный метод showinfo\nСумма: {Sum}");
+        }
+        public override string ToString()
+        {
+            return $"Класс Cheque";
         }
     }
 }

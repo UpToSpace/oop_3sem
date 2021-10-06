@@ -6,7 +6,30 @@ using System.Threading.Tasks;
 
 namespace laba5
 {
-    class Receipt
+    sealed class Receipt : Document, IOrganization
     {
+        public string Organization
+        {
+            get;
+            set;
+        }
+        public Receipt(int date, int numberOfGoods, string organization): base(date, numberOfGoods)
+        {
+            Organization = organization;
+        }
+        public bool SignADoc()
+        {
+            Console.WriteLine("Подписана квитанция");
+            return !Signed;
+        }
+        public override void ShowInfo()
+        {
+            base.ShowInfo();
+            Console.WriteLine("Переопределенный метод showinfo\nОрганизация: " + Organization);
+        }
+        public override string ToString()
+        {
+            return $"Класс Receipt";
+        }
     }
 }
