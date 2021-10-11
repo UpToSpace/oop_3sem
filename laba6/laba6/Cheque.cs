@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace laba5
+namespace laba6
 {
     class Cheque : Document, IOrganization
     {
@@ -19,7 +19,8 @@ namespace laba5
         }
         public bool SignADoc()
         {
-            return Signed = true;
+            Console.WriteLine("Подписан чек");
+            return !Signed;
         }
         public override void ShowInfo()
         {

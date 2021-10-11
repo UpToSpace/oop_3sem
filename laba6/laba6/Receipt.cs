@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace laba5
+namespace laba6
 {
     sealed class Receipt : Document, IOrganization
     {
@@ -19,7 +19,8 @@ namespace laba5
         }
         public bool SignADoc()
         {
-            return Signed = true;
+            Console.WriteLine("Подписана квитанция");
+            return !Signed;
         }
         public override void ShowInfo()
         {

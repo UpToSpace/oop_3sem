@@ -14,6 +14,7 @@ namespace laba5
             Cheque cheque = docCheque as Cheque;
             if (cheque != null)
             {
+                cheque.SignADoc();
                 cheque.ShowInfo();
             }
             IOrganization orgWaybill = new Waybill(06102021, 400, 0.2);
@@ -25,11 +26,13 @@ namespace laba5
             Document docReceipt = new Receipt(07102021, 500, "organiz");
             if (docReceipt is Receipt receipt)
             {
+                receipt.SignADoc();
                 receipt.ShowInfo();
             }
             Console.WriteLine("------------------------------------");
             Waybill waybill = orgWaybill as Waybill;
             receipt = docReceipt as Receipt;
+            
             Document[] docs = { cheque, waybill, receipt};
             Printer printer = new Printer();
             foreach (var item in docs)
