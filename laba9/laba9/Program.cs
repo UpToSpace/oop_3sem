@@ -13,10 +13,7 @@ namespace laba9
 
             programmer.ShowList(list1);
 
-            programmer.Removing += list =>
-            {
-                Console.ForegroundColor = ConsoleColor.Blue;
-            };
+            programmer.Removing += list => Console.ForegroundColor = ConsoleColor.Blue;
             programmer.Removing += programmer.ShowList;
             programmer.Remove(list1);
             Console.ResetColor();
