@@ -1,0 +1,15 @@
+06.12.2021 15:36:09: GetFreeSpace works
+06.12.2021 15:36:09: GetEveryDisk works
+06.12.2021 15:36:09: GetFileInfo works
+06.12.2021 15:36:09: GetDirInfo works
+06.12.2021 15:36:09: A works
+06.12.2021 15:36:09: B works
+06.12.2021 15:36:09: C works
+Number of lines: 7
+06.12.2021 15:36:09: GetFreeSpace works
+06.12.2021 15:36:09: GetEveryDisk works
+06.12.2021 15:36:09: GetFileInfo works
+06.12.2021 15:36:09: GetDirInfo works
+06.12.2021 15:36:09: B works
+06.12.2021 15:36:09: C works
+
