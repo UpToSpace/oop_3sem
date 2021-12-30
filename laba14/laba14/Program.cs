@@ -70,6 +70,7 @@ namespace laba14
                 }
             }
 
+            // Используя XPath напишите два селектора для вашего XML документа.
 
             XPathDocument doc = new XPathDocument("waybill.xml");
             XPathNavigator nav = doc.CreateNavigator();
@@ -83,6 +84,7 @@ namespace laba14
             {
                 System.Console.WriteLine(item);
             }
+            //Используя Linq to XML (или Linq to JSON) создайте новый xml (json) - документ и напишите несколько запросов.
 
             XDocument Xdoc = new XDocument();
             XElement root = new XElement("Animals");
